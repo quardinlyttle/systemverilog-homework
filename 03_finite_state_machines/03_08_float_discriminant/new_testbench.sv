@@ -51,7 +51,7 @@ module new_testbench #(parameter FLEN = 8);
 
     endtask
 
-    float_discriminant dut(.clk(clk),.rst(rst),.arg_vld(arg_vld),.a(a),.b(b),.c(c),.rst_vld(rst_vld),.res(res),
+    float_discriminant dut(.clk(clk),.rst(rst),.arg_vld(arg_vld),.a(a),.b(b),.c(c),.res_vld(res_vld),.res(res),
                         .res_negative(res_negative),.err(err),.busy(busy));
 
     //Some basic testing of stimuli
