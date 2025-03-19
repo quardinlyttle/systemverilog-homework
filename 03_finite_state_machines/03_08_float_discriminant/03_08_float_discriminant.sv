@@ -1,8 +1,7 @@
 //----------------------------------------------------------------------------
 // Task
 //----------------------------------------------------------------------------
-//adding parameter for FLEN for Modelsim purposes rather than using header file
-module float_discriminant #(parameter FLEN = 8) (
+module float_discriminant(
     input                     clk,
     input                     rst,
 
@@ -65,44 +64,16 @@ module float_discriminant #(parameter FLEN = 8) (
     f_add aPlus_bSquare(.clk(clk), .rst(rst), .a(stage2_a), .b(stage2_bsq), .up_valid(stage2_valid), .res(a_p_bsq), .down_valid(aPlusBsq_valid), .busy(busy4), .error(error4));
     f_add total_sum(.clk(clk), .rst(rst), .a(stage3_aMulcsq), .b(stage3_aPlusbcsq), .up_valid(stage3_valid), .res(final_sum), .down_valid(final_valid), .busy(busy5), .error(error5));
 
-    
-    always_ff @( posedge clk or posedge rst) begin : PIPELINE
+
+//Stage1  
+    always_ff @( posedge clk or posedge rst) begin : STAGE1
         if(rst) begin
 
             //Reset stage 1
             stage1_valid <=1'b0;
-            b_sq <= {FLEN{1'b0}};
-            c_sq <= {FLEN{1'b0}};
             stage1_a <= {FLEN{1'b0}};
             stage1_b <= {FLEN{1'b0}};
             stage1_c <= {FLEN{1'b0}};
-            bsq_valid <= 1'b0;
-            csq_valid <= 1'b0;
-
-            //Reset Stage 2
-            a_x_csq <= {FLEN{1'b0}};
-            a_p_bsq <= {FLEN{1'b0}};
-            stage2_a <= {FLEN{1'b0}};
-            stage2_bsq <= {FLEN{1'b0}};
-            stage2_csq <= {FLEN{1'b0}};
-            stage2_valid <= 1'b0;
-            final_valid <= 1'b0;
-            aMulCsq_valid <= 1'b0;
-            aPlusBsq_valid <= 1'b0;
-
-            //Reset Stage 3
-            final_sum <= {FLEN{1'b0}};
-            final_valid <= 1'b0;
-            stage3_valid <= 1'b0;
-            stage3_aMulcsq <= {FLEN{1'b0}};
-            stage3_aPlusbcsq <= {FLEN{1'b0}};
-
-            //Reset output
-            res_vld <= 1'b0;
-            res <= {FLEN{1'b0}};
-            res_negative <= 1'b0;
-            err <= 1'b0;
-            busy <= 1'b0;
         end
         //Valid data at clk cycle.
         else if(arg_vld) begin
@@ -111,11 +82,22 @@ module float_discriminant #(parameter FLEN = 8) (
             stage1_c <= c;
             stage1_valid <=1'b1;
         end
-        if(!arg_vld) begin
+        else begin
             stage1_valid <=1'b0;
         end
+    end
+
+//Stage2
+    always_ff @( posedge clk or posedge rst) begin : STAGE2
+        if(rst) begin
+            //Reset Stage 2
+            stage2_a <= {FLEN{1'b0}};
+            stage2_bsq <= {FLEN{1'b0}};
+            stage2_csq <= {FLEN{1'b0}};
+            stage2_valid <= 1'b0;
+        end
         //Stage2
-        if(csq_valid && bsq_valid && (!(error1 || error2))) begin
+        else if(csq_valid && bsq_valid && (!(error1 || error2))) begin
             stage2_valid <=1'b1;
             stage2_a <= stage1_a;
             stage2_bsq <= b_sq;
@@ -124,8 +106,19 @@ module float_discriminant #(parameter FLEN = 8) (
         else begin
             stage2_valid <=1'b0;
         end
-        //Stage3
-        if(aMulCsq_valid && aPlusBsq_valid && (!(error3 || error4))) begin
+    end
+
+//Stage3
+    always_ff @( posedge clk or posedge rst) begin : STAGE3
+        if(rst) begin
+            //Reset Stage 3
+            stage3_valid <= 1'b0;
+            stage3_aMulcsq <= {FLEN{1'b0}};
+            stage3_aPlusbcsq <= {FLEN{1'b0}};
+
+        end
+                //Stage3
+        else if(aMulCsq_valid && aPlusBsq_valid && (!(error3 || error4))) begin
             stage3_valid <= 1'b1;
             stage3_aMulcsq <= a_x_csq;
             stage3_aPlusbcsq <=a_p_bsq;
@@ -133,8 +126,20 @@ module float_discriminant #(parameter FLEN = 8) (
         else begin 
             stage3_valid <=1'b0;
         end
-        //output
-        if (final_valid) begin
+    end
+
+//Output
+    always_ff @( posedge clk or posedge rst) begin : Output 
+        if(rst) begin 
+            //Reset output
+            res_vld <= 1'b0;
+            res <= {FLEN{1'b0}};
+            res_negative <= 1'b0;
+            err <= 1'b0;
+            busy <= 1'b0;
+        end
+            //output
+       else if (final_valid) begin
             if (!error5) begin
                 res <= final_sum;
                 res_vld <= 1'b1;
@@ -150,8 +155,6 @@ module float_discriminant #(parameter FLEN = 8) (
             res <= {FLEN{1'b0}};
             res_vld <= 1'b0;
             res_negative <= 1'b0;
-        end
-
-        
+        end  
     end
 endmodule

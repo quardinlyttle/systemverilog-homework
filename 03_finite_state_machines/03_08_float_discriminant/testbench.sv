@@ -250,7 +250,7 @@ module testbench;
             // Uncomment the following line
             // to generate a VCD file and analyze it using GTKwave
 
-            // $dumpvars;
+            $dumpvars;
         `endif
 
         run ();
@@ -319,6 +319,8 @@ module testbench;
             if (arg_vld)
             begin
                 res_expected = $realtobits( $bitstoreal (b) * $bitstoreal (b) - 4 * $bitstoreal (a) * $bitstoreal (c) );
+                $display("a=%d, b=%d, c=%d",a,b,c);
+               
 
                 queue.push_back (res_expected);
             end
@@ -356,8 +358,8 @@ module testbench;
                     end
                     else if ( ( err_expected === 1'b0 ) && ( res !== res_expected ) )
                     begin
-                        $display ("FAIL %s: res mismatch. Expected %s, actual %s",
-                            test_id, `PG_BITS (res_expected), `PG_BITS (res) );
+                        $display ("FAIL %s: res mismatch. Expected %s, actual %s, a=%s,b=%s,c=%s",
+                            test_id, `PG_BITS (res_expected), `PG_BITS (res),`PG_BITS (a),`PG_BITS (b),`PG_BITS (c) );
 
                         $finish;
                     end
