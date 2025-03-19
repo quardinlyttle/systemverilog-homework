@@ -1,8 +1,8 @@
 //----------------------------------------------------------------------------
 // Task
 //----------------------------------------------------------------------------
-
-module float_discriminant (
+//adding parameter for FLEN for Modelsim purposes rather than using header file
+module float_discriminant #(parameter FLEN = 8) (
     input                     clk,
     input                     rst,
 
@@ -37,6 +37,8 @@ module float_discriminant (
     // The FLEN parameter is defined in the "import/preprocessed/cvw/config-shared.vh" file
     // and usually equal to the bit width of the double-precision floating-point number, FP64, 64 bits.
 
+ 
+
     //Pipeline stages
     logic [FLEN-1:0] stage1_a,stage1_b,stage1_c,b_sq, c_sq;
     logic stage1_valid, bsq_valid, csq_valid;
@@ -53,7 +55,7 @@ module float_discriminant (
     //For busy, I am assuming each module will have its own busy logic which would be more useful for pipelining within itself, however for this assignment
     // I will not use it for simplicity and scope.
 
-    logic error1,error2,bust3,error4,error5, sys_error;
+    logic error1,error2,error3,error4,error5, sys_error;
     assign sys_error = error1||error2 || error3 || error4 || error5;
 
     //Instantiation of Pipline modules. 
@@ -98,7 +100,7 @@ module float_discriminant (
             //Reset output
             res_vld <= 1'b0;
             res <= {FLEN{1'b0}};
-            res_negative, <= 1'b0;
+            res_negative <= 1'b0;
             err <= 1'b0;
             busy <= 1'b0;
         end
