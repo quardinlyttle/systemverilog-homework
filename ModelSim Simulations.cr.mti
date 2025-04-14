@@ -1,0 +1,27 @@
+{G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv} {0 {vlog -work work -sv -stats=none {G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module wally_fpu
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(35): (vlog-2730) Undefined variable: 'FMTBITS'.
+** Error (suppressible): G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(35): (vlog-2388) 'Format' already declared in this scope (wally_fpu) at G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(35).
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(37): (vlog-2730) Undefined variable: 'FLEN'.
+** Error (suppressible): G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(37): (vlog-2388) 'A' already declared in this scope (wally_fpu) at G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(37).
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(59): (vlog-2730) Undefined variable: 'XLEN'.
+** Error (suppressible): G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(59): (vlog-2388) 'FIntResM' already declared in this scope (wally_fpu) at G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(59).
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(102): (vlog-2730) Undefined variable: 'NE'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(104): (vlog-2730) Undefined variable: 'NF'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(118): (vlog-2730) Undefined variable: 'LOGFLEN'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(123): (vlog-2730) Undefined variable: 'FMALEN'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(134): (vlog-2730) Undefined variable: 'LOGCVTLEN'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(138): (vlog-2730) Undefined variable: 'CVTLEN'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(142): (vlog-2730) Undefined variable: 'DIVb'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(260): (vlog-2730) Undefined variable: 'FPSIZES'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(323): (vlog-2730) Undefined variable: 'ZFA_SUPPORTED'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(355): (vlog-2730) Undefined variable: 'D_LEN'.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(35): (vlog-13294) Identifier must be declared with a port mode: Format.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(37): (vlog-13294) Identifier must be declared with a port mode: A.
+** Error: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/wally_fpu.sv(59): (vlog-13294) Identifier must be declared with a port mode: FIntResM.
+
+} {4.0 5.0 6.0 7.0 8.0 9.0 10.0 23.0} {}} {G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/util.svh} {1 {vlog -work work -sv -stats=none {G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/util.svh}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}}

@@ -36,12 +36,14 @@ module testbench;
     //--------------------------------------------------------------------------
     // Instantiating DUT
 
-    localparam PIPE        = 0,
+    localparam PIPE        = 1,
                FSM         = 0,
                DISTRIBUTOR = 0,
                MOCKUP      = 0,
                DEFECTIVE   = 0;
 
+           float_discriminant DUT (.*);
+/*
     generate
 
         if (! PIPE && FSM == 1)
@@ -63,7 +65,7 @@ module testbench;
            float_discriminant DUT (.*);
 
     endgenerate
-
+*/
     //--------------------------------------------------------------------------
     // Driving clk
 
@@ -250,7 +252,7 @@ module testbench;
             // Uncomment the following line
             // to generate a VCD file and analyze it using GTKwave
 
-            $dumpvars;
+             $dumpvars;
         `endif
 
         run ();
@@ -295,8 +297,8 @@ module testbench;
     //--------------------------------------------------------------------------
     // Modeling and checking
 
-    logic [FLEN - 1:0] queue [$];
-    logic [FLEN - 1:0] res_expected;
+    logic [4 * FLEN - 1:0] queue [$];
+    logic [FLEN - 1:0] old_a, old_b,old_c, res_expected;
     logic              err_expected;
 
     logic was_reset = 0;
@@ -306,6 +308,8 @@ module testbench;
     // block, so no race condition is possible
 
     // verilator lint_off BLKSEQ
+
+    bit sticky_failure = 0;
 
     always @ (posedge clk)
     begin
@@ -318,11 +322,12 @@ module testbench;
         begin
             if (arg_vld)
             begin
-                res_expected = $realtobits( $bitstoreal (b) * $bitstoreal (b) - 4 * $bitstoreal (a) * $bitstoreal (c) );
-                $display("a=%d, b=%d, c=%d",a,b,c);
-               
+                   res_expected = $realtobits( $bitstoreal (a)+$bitstoreal (b)**2+$bitstoreal (a)*$bitstoreal (c)**2);
+                // res_expected = $realtobits( $bitstoreal (b) * $bitstoreal (b) - 4 * $bitstoreal (a) * $bitstoreal (c) );
 
-                queue.push_back (res_expected);
+                //queue.push_back (res_expected);
+                queue.push_back ({a,b,c,res_expected});
+
             end
 
             if (res_vld)
@@ -338,10 +343,10 @@ module testbench;
                 begin
                     `ifdef __ICARUS__
                         // Some version of Icarus has a bug, and this is a workaround
-                        res_expected = queue [0];
+                        {old_a,old_b,old_c,res_expected} = queue [0];
                         queue.delete (0);
                     `else
-                        res_expected = queue.pop_front ();
+                        {old_a,old_b,old_c,res_expected} = queue.pop_front ();
                     `endif
 
                     err_expected = is_err ( res_expected );
@@ -358,8 +363,10 @@ module testbench;
                     end
                     else if ( ( err_expected === 1'b0 ) && ( res !== res_expected ) )
                     begin
-                        $display ("FAIL %s: res mismatch. Expected %s, actual %s, a=%s,b=%s,c=%s",
-                            test_id, `PG_BITS (res_expected), `PG_BITS (res),`PG_BITS (a),`PG_BITS (b),`PG_BITS (c) );
+                        $display ("FAIL %s: res mismatch. Expected %s, actual %s, a:%d b:%d c:%d",
+                            test_id, `PG_BITS (res_expected), `PG_BITS (res), $bitstoreal(old_a), $bitstoreal(old_b),$bitstoreal(old_c));
+
+                        sticky_failure = 1;
 
                         $finish;
                     end
@@ -376,7 +383,8 @@ module testbench;
     begin
         if (queue.size () == 0)
         begin
-            $display ("PASS %s", test_id);
+            if (! sticky_failure)
+                $display ("PASS %s", test_id);
         end
         else
         begin

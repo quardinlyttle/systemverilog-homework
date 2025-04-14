@@ -1,0 +1,159 @@
+# Compile of 03_08_float_discriminant.sv failed with 5 errors.
+# Compile of new_testbench.sv failed with 1 errors.
+# Compile of util.svh was successful.
+# Compile of f_add.sv failed with 6 errors.
+# Compile of f_mult.sv failed with 6 errors.
+# Compile of f_div.sv failed with 6 errors.
+# Compile of f_fpu_tb.sv was successful.
+# Compile of f_less_or_equal.sv failed with 6 errors.
+# Compile of f_less_or_equal_tb.sv was successful.
+# Compile of f_sqrt.sv failed with 6 errors.
+# Compile of f_sub.sv failed with 6 errors.
+# Compile of wally_fpu.sv failed with 19 errors.
+# Compile of isqrt.sv was successful.
+# Compile of isqrt_slice_comb.sv was successful.
+# Compile of isqrt_slice_reg.sv was successful.
+# 15 compiles, 9 failed with 61 errors.
+# Compile of 03_08_float_discriminant.sv failed with 5 errors.
+# Compile of new_testbench.sv failed with 1 errors.
+# Compile of util.svh was successful.
+# Compile of f_add.sv failed with 6 errors.
+# Compile of f_mult.sv failed with 6 errors.
+# Compile of f_div.sv failed with 6 errors.
+# Compile of f_fpu_tb.sv was successful.
+# Compile of f_less_or_equal.sv failed with 6 errors.
+# Compile of f_less_or_equal_tb.sv was successful.
+# Compile of f_sqrt.sv failed with 6 errors.
+# Compile of f_sub.sv failed with 6 errors.
+# Compile of wally_fpu.sv failed with 19 errors.
+# Compile of isqrt.sv was successful.
+# Compile of isqrt_slice_comb.sv was successful.
+# Compile of isqrt_slice_reg.sv was successful.
+# Compile of config-shared.vh failed with 4 errors.
+# 16 compiles, 10 failed with 65 errors.
+# Compile of 03_08_float_discriminant.sv failed with 5 errors.
+# Compile of new_testbench.sv failed with 2 errors.
+# Compile of util.svh was successful.
+# Compile of f_add.sv failed with 6 errors.
+# Compile of f_mult.sv failed with 6 errors.
+# Compile of f_div.sv failed with 6 errors.
+# Compile of f_fpu_tb.sv was successful.
+# Compile of f_less_or_equal.sv failed with 6 errors.
+# Compile of f_less_or_equal_tb.sv was successful.
+# Compile of f_sqrt.sv failed with 6 errors.
+# Compile of f_sub.sv failed with 6 errors.
+# Compile of wally_fpu.sv failed with 19 errors.
+# Compile of isqrt.sv was successful.
+# Compile of isqrt_slice_comb.sv was successful.
+# Compile of isqrt_slice_reg.sv was successful.
+# Compile of config-shared.vh failed with 4 errors.
+# 16 compiles, 10 failed with 66 errors.
+# Compile of 03_08_float_discriminant.sv failed with 5 errors.
+# Compile of new_testbench.sv failed with 2 errors.
+# Compile of util.svh was successful.
+# Compile of f_add.sv failed with 6 errors.
+# Compile of f_mult.sv failed with 6 errors.
+# Compile of f_sub.sv failed with 6 errors.
+# Compile of wally_fpu.sv failed with 19 errors.
+# Compile of config-shared.vh failed with 4 errors.
+# 8 compiles, 7 failed with 48 errors.
+# Compile of 03_08_float_discriminant.sv failed with 4 errors.
+# Compile of new_testbench.sv failed with 3 errors.
+# Compile of util.svh was successful.
+# Compile of f_add.sv failed with 6 errors.
+# Compile of f_mult.sv failed with 6 errors.
+# Compile of f_sub.sv failed with 6 errors.
+# Compile of wally_fpu.sv failed with 19 errors.
+# Compile of config-shared.vh failed with 4 errors.
+# 8 compiles, 7 failed with 48 errors.
+# Compile of 03_08_float_discriminant.sv failed with 3 errors.
+# Compile of 03_08_float_discriminant.sv failed with 4 errors.
+# Compile of 03_08_float_discriminant.sv was successful.
+# Compile of 03_08_float_discriminant.sv was successful.
+# Compile of new_testbench.sv failed with 1 errors.
+# Compile of util.svh was successful.
+# Compile of f_add.sv failed with 6 errors.
+# Compile of f_mult.sv failed with 6 errors.
+# Compile of f_sub.sv failed with 6 errors.
+# Compile of wally_fpu.sv failed with 19 errors.
+# Compile of config-shared.vh failed with 4 errors.
+# 8 compiles, 6 failed with 42 errors.
+# Compile of 03_08_float_discriminant.sv was successful.
+# Compile of new_testbench.sv was successful.
+# Compile of util.svh was successful.
+# Compile of f_add.sv failed with 6 errors.
+# Compile of f_mult.sv failed with 6 errors.
+# Compile of f_sub.sv failed with 6 errors.
+# Compile of wally_fpu.sv failed with 19 errors.
+# Compile of config-shared.vh failed with 4 errors.
+# 8 compiles, 5 failed with 41 errors.
+# Compile of 03_08_float_discriminant.sv was successful.
+# Compile of new_testbench.sv was successful.
+# Compile of util.svh was successful.
+# Compile of f_add.sv was successful.
+# Compile of f_mult.sv was successful.
+# Compile of config-shared.vh failed with 4 errors.
+# 6 compiles, 1 failed with 4 errors.
+vsim work.new_testbench
+# vsim work.new_testbench 
+# Start time: 01:20:07 on Mar 19,2025
+# Loading sv_std.std
+# Loading work.new_testbench
+# Loading work.float_discriminant
+# Loading work.f_mult
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/bSquare File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_mult.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/cSquare File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_mult.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/aMul_cSquare File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_mult.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# Loading work.f_add
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/aPlus_bSquare File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_add.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/total_sum File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_add.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# Error loading design
+# End time: 01:20:09 on Mar 19,2025, Elapsed time: 0:00:02
+# Errors: 5, Warnings: 25
+vsim work.new_testbench
+# vsim work.new_testbench 
+# Start time: 01:20:15 on Mar 19,2025
+# Loading sv_std.std
+# Loading work.new_testbench
+# Loading work.float_discriminant
+# Loading work.f_mult
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/bSquare File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_mult.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/cSquare File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_mult.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/aMul_cSquare File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_mult.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# Loading work.f_add
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/aPlus_bSquare File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_add.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# ** Error: (vsim-3033) Instantiation of 'wally_fpu' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_testbench/dut/total_sum File: G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/wally_fpu/f_add.sv Line: 36
+#         Searched libraries:
+#             G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/work
+# Error loading design
+# End time: 01:20:17 on Mar 19,2025, Elapsed time: 0:00:02
+# Errors: 5, Warnings: 1
+# Compile of wally_fpu.sv failed with 19 errors.

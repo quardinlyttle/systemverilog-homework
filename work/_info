@@ -1,0 +1,186 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework
+vf_add
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1742361490
+!i10b 1
+!s100 M0Dc7X7Tz;X`>=4U7Ymlb0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I]1QZX5P7G5:VU3e?GE=jn2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1742361476
+8G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\common\wally_fpu\f_add.sv
+FG:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\common\wally_fpu\f_add.sv
+!i122 15
+Z4 L0 2 51
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1742361490.000000
+!s107 G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\common\wally_fpu\f_add.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\common\wally_fpu\f_add.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vf_mult
+R1
+!s110 1742361491
+!i10b 1
+!s100 ZfX4kf]=>QDlMWhkWn^Uk3
+R2
+I8JaMF3E<n9>YJ5JO2fOX>0
+R3
+S1
+R0
+w1742361481
+8G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\common\wally_fpu\f_mult.sv
+FG:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\common\wally_fpu\f_mult.sv
+!i122 16
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\common\wally_fpu\f_mult.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\common\wally_fpu\f_mult.sv|
+!i113 1
+R7
+R8
+vfloat_discriminant
+R1
+!s110 1742361488
+!i10b 1
+!s100 :DaTIY1olYXz[hV`[8EJK2
+R2
+I7N0PjYhM`5io9_WkiT^_E3
+R3
+S1
+R0
+w1742361221
+8G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\03_finite_state_machines\03_08_float_discriminant\03_08_float_discriminant.sv
+FG:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\03_finite_state_machines\03_08_float_discriminant\03_08_float_discriminant.sv
+!i122 13
+L0 6 153
+R5
+r1
+!s85 0
+31
+!s108 1742361488.000000
+!s107 G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\03_finite_state_machines\03_08_float_discriminant\03_08_float_discriminant.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|G:\My Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\03_finite_state_machines\03_08_float_discriminant\03_08_float_discriminant.sv|
+!i113 1
+R7
+R8
+visqrt
+R1
+Z9 !s110 1742360663
+!i10b 1
+!s100 W4O^Lh@AWFU`R6Xz:Hz?90
+R2
+IJX9f8B^o0XKZXY_4d=F]k3
+R3
+S1
+R0
+Z10 w1741563105
+8G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt.sv
+FG:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt.sv
+!i122 6
+L0 6 84
+R5
+r1
+!s85 0
+31
+!s108 1742360662.000000
+!s107 G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt.sv|
+!i113 1
+R7
+R8
+visqrt_slice_comb
+R1
+R9
+!i10b 1
+!s100 K=LV^NOYhlcM3>=@nheHA1
+R2
+IH804dPQgGH>46boej2zEL1
+R3
+S1
+R0
+R10
+8G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt_slice_comb.sv
+FG:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt_slice_comb.sv
+!i122 7
+L0 1 18
+R5
+r1
+!s85 0
+31
+!s108 1742360663.000000
+!s107 G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt_slice_comb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt_slice_comb.sv|
+!i113 1
+R7
+R8
+visqrt_slice_reg
+R1
+!s110 1742360664
+!i10b 1
+!s100 ;G06=@8g<Wjl7JHJCQ5Y=0
+R2
+If^X4O>oYggeToeMjGZXPQ0
+R3
+S1
+R0
+R10
+8G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt_slice_reg.sv
+FG:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt_slice_reg.sv
+!i122 8
+L0 1 41
+R5
+r1
+!s85 0
+31
+!s108 1742360664.000000
+!s107 G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt_slice_reg.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/common/isqrt/isqrt_slice_reg.sv|
+!i113 1
+R7
+R8
+vnew_testbench
+R1
+!s110 1742361489
+!i10b 1
+!s100 f=4ijYAJj3KbVYhVH1?EN1
+R2
+Ih;f8n7HmL3E6`lRdnkK8?1
+R3
+S1
+R0
+w1742361286
+8G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/03_finite_state_machines/03_08_float_discriminant/new_testbench.sv
+FG:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/03_finite_state_machines/03_08_float_discriminant/new_testbench.sv
+!i122 14
+L0 6 68
+R5
+r1
+!s85 0
+31
+!s108 1742361489.000000
+!s107 util.svh|G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/03_finite_state_machines/03_08_float_discriminant/new_testbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|G:/My Drive/Documents/Projects/SystemVerilogHomework/systemverilog-homework/03_finite_state_machines/03_08_float_discriminant/new_testbench.sv|
+!i113 1
+R7
+R8

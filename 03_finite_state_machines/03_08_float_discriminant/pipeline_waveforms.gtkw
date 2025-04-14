@@ -1,0 +1,99 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Apr 12 12:08:21 2025
+[*]
+[dumpfile] "D:\Google Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\03_finite_state_machines\03_08_float_discriminant\dump.vcd"
+[savefile] "D:\Google Drive\Documents\Projects\SystemVerilogHomework\systemverilog-homework\03_finite_state_machines\03_08_float_discriminant\pipeline_waveforms.gtkw"
+[timestart] 2371
+[size] 1920 1009
+[pos] -87 -87
+*-4.635398 2413 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[treeopen] testbench.DUT.
+[treeopen] testbench.DUT.bSquare.
+[treeopen] testbench.DUT.cSquare.
+[sst_width] 317
+[signals_width] 268
+[sst_expanded] 1
+[sst_vpaned_height] 297
+@200
+-float_discrim
+@28
+testbench.DUT.clk
+testbench.DUT.rst
+testbench.DUT.arg_vld
+@40020
+testbench.DUT.a[63:0]
+testbench.DUT.b[63:0]
+testbench.DUT.c[63:0]
+@28
+testbench.DUT.res_vld
+@40020
+testbench.DUT.res[63:0]
+[color] 1
+testbench.DUT.stage1_a[63:0]
+@200
+-bsquare
+@28
+testbench.DUT.bSquare.up_valid
+@40020
+testbench.DUT.bSquare.a[63:0]
+testbench.DUT.bSquare.b[63:0]
+@28
+testbench.DUT.bSquare.down_valid
+@40020
+testbench.DUT.bSquare.res[63:0]
+@200
+-csquare
+@40020
+testbench.DUT.cSquare.up_valid
+testbench.DUT.cSquare.a[63:0]
+testbench.DUT.cSquare.b[63:0]
+testbench.DUT.cSquare.down_valid
+testbench.DUT.cSquare.res[63:0]
+@40021
+[color] 1
+testbench.DUT.stage2_a[63:0]
+@200
+-aMul_cSquare
+@28
+[color] 6
+testbench.DUT.aMul_cSquare.up_valid
+@40020
+[color] 6
+testbench.DUT.aMul_cSquare.a[63:0]
+[color] 6
+testbench.DUT.aMul_cSquare.b[63:0]
+[color] 6
+testbench.DUT.aMul_cSquare.res[63:0]
+@28
+[color] 6
+testbench.DUT.aMul_cSquare.down_valid
+@200
+-aPlus_bSquare
+@40020
+[color] 6
+testbench.DUT.aPlus_bSquare.a[63:0]
+[color] 6
+testbench.DUT.aPlus_bSquare.b[63:0]
+[color] 6
+testbench.DUT.aPlus_bSquare.down_valid
+[color] 6
+testbench.DUT.aPlus_bSquare.res[63:0]
+[color] 6
+testbench.DUT.aPlus_bSquare.up_valid
+@40200
+-Total_Sum
+@40020
+[color] 3
+testbench.DUT.total_sum.up_valid
+[color] 3
+testbench.DUT.total_sum.a[63:0]
+[color] 3
+testbench.DUT.total_sum.b[63:0]
+[color] 3
+testbench.DUT.total_sum.down_valid
+[color] 3
+testbench.DUT.total_sum.res[63:0]
+[pattern_trace] 1
+[pattern_trace] 0

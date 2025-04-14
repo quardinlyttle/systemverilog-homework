@@ -39,7 +39,7 @@ module float_discriminant(
  
 
     //Pipeline stages
-    logic [FLEN-1:0] stage1_a,stage1_b,stage1_c,b_sq, c_sq;
+    logic [FLEN-1:0] stage1_a,stage1_b,stage1_c,b_sq, c_sq, stage1_a_Cycle1, stage1_a_Cycle2, stage1_a_Cycle3,stage1_a_Cycle4;
     logic stage1_valid, bsq_valid, csq_valid;
 
     logic [FLEN-1:0] stage2_a,stage2_bsq, stage2_csq, a_x_csq, a_p_bsq;
@@ -85,6 +85,10 @@ module float_discriminant(
         else begin
             stage1_valid <=1'b0;
         end
+        stage1_a_Cycle1 <= stage1_a;
+        stage1_a_Cycle2 <= stage1_a_Cycle1;
+        stage1_a_Cycle3 <= stage1_a_Cycle2;
+       // stage1_a_Cycle4 <= stage1_a_Cycle3;
     end
 
 //Stage2
@@ -99,7 +103,8 @@ module float_discriminant(
         //Stage2
         else if(csq_valid && bsq_valid && (!(error1 || error2))) begin
             stage2_valid <=1'b1;
-            stage2_a <= stage1_a;
+            //stage2_a <= stage1_a;
+            stage2_a <= stage1_a_Cycle3;
             stage2_bsq <= b_sq;
             stage2_csq <= c_sq;
         end
